@@ -28,6 +28,10 @@ def main():
                 return
         
         updatable.update(dt)
+        
+        for asteroid in asteroids:
+            if player.check_collision(asteroid):
+                sys.exit("Game over!")
             
         screen.fill((0,0,0))
         
